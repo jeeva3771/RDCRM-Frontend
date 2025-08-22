@@ -1,0 +1,120 @@
+
+:root {
+  --theme-bg: theme('colors.white');
+  --theme-surface: theme('colors.gray.50');
+  --theme-text-primary: theme('colors.gray.900');
+  --theme-text-secondary: theme('colors.gray.600');
+  --theme-border: theme('colors.gray.200');
+}
+
+.dark {
+  --theme-bg: theme('colors.slate.900');
+  --theme-surface: theme('colors.slate.800');
+  --theme-text-primary: theme('colors.gray.100');
+  --theme-text-secondary: theme('colors.gray.300');
+  --theme-border: theme('colors.gray.700');
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+/* in App.css or theme.css */
+body.light-theme {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+  --card-bg: #f9f9f9;
+  --sidebar-bg: #f1f5f9;
+}
+
+body.dark-theme {
+  --bg-color: #0f172a;
+  --text-color: #f1f5f9;
+  --card-bg: #1e293b;
+  --sidebar-bg: #111827;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg);
+}
+
+
+.bg-status-production {
+  background-color: #fff599; /* orange-500 */
+}
+
+.bg-status-packaging {
+  background-color: #87ceeb; /* blue-500 */
+}
+
+.bg-status-billing {
+  background-color: #f7dc6f; /* emerald-500 */
+}
+
+.bg-status-sampling {
+  background-color: #ffd7be; /* violet-500 */
+}
+
+.bg-status-enquiry {
+  background-color: #b2fffc; /* amber-500 */
+}
+
+.bg-status-design {
+  background-color: #c7b8ea; /* pink-500 */
+}
+
+
+.primary-bgclr {
+  background-color: #0061ed;
+}
+
+.hover\:text-primary-blue:hover {
+  color: #0061ed;
+}
+
+.hover\:text-general-green:hover {
+  color: rgb(76 175 80 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-general-red:hover {
+  color: rgb(244 67 54 / var(--tw-text-opacity, 1));
+}
+
+/* .custom-textarea:focus {
+  border-color: #0061ed;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+} */
+
+
